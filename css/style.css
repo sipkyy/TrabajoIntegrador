@@ -432,9 +432,177 @@ footer a {
 .espacio {
     display: inline-block;
     margin-top:4px
+
+}
+
+  .contenedor_oferta {
+        display: flex;
+        position: relative;
+        left:20em;
+        gap:.3em;
+        max-width: 50em;
+
+    }
+
+    .Oferta_titulo {
+        padding: 1.3em 1em .2em 2em;
+         font-weight: 500;
+          color:rgb(32,38,44)
+
+     }
+    .Oferta_subtitulo {
+            padding: 1em 1em 1em 1.7em;
+            font-size: 1.1em;
+             color:rgb(32,38,44)
+    }
+    .Oferta_porcentaje {
+             padding: 1em 1em .2em 6em;
+             font-weight: bold;
+              color:rgb(32,38,44) 
+
+    }
+    .Oferta_documentacion {
+             padding: 1em 1em 1em 1.5em;
+             color:gray;
+    }
+    .estudiante {
+        border: 1.5px solid rgb(12,129,255);   
+    }
+    .trainee {
+        border: 1.5px solid rgb(26,164,186);  
+    }
+    .junior {
+        border: 2px solid rgb(254,193,7)
+    }
+    .Oferta_venta {
+        margin:.5em 0em .2em 40em;
+                 font-weight: 500;
+                 font-size: 1em;
+                  color:rgb(32,38,44)
+    }
+
+    .Oferta_ticket {
+         margin:.5em 0em .2em 15em;
+       font-size: 2em;
+        color:rgb(32,38,44)
+   }
+    .Oferta_ticket-mq {
+display:none;
+   }
+   .Oferta_form {
+    display: flex;
+    gap:1em;
+   }
+
+   .Oferta_nombre {
+    padding:1em;
+    margin-left: 20em;
+    width:22em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+   }
+   .Oferta_apellido {
+    padding:1em;
+    width:22em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+   }
+   .Oferta_correo {
+    padding:1em;
+    width:45em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+    margin-left: 20em;
+    margin-bottom:1em;
+   }
+   .Oferta_form2 {
+    white-space: pre-line;
+   }
+   .Oferta_form3 {
+    display: flex;
+    gap:1em;
+   }
+   .Oferta_estudiante {
+    margin-top:1em;
+    padding:1em;
+    width:22em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+   }
+   .Oferta_cantidad {
+    padding:1em;
+    margin-top:1em;
+    margin-left: 20em;
+    width:22em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+   }
+
+    .Oferta_estudiante1 {
+    font-size: 1em;
+    margin-left:20em;
+    margin-top:1em !important ;
+
+   }
+   .Oferta_cantidad1 {
+    margin-left:20em;
+    margin-top:1.5em;
+    font-size: 1em;
+   }
+.Jspay {
+    font-size:1.2em;
+    margin-left:16.5em;
+    margin-top:1.7em;
+    padding:1em;
+    border:1px solid rgb(182,217,255);
+    width:38em;
+    height: 3,4em;
+    color:rgb(3,68,136);
+    background-color: rgb(204,229,255);
+    border-radius: 5px;
+}
+.Btn {
+    display: flex;
+    gap:1em;
+       }
+.Oferta_resumen {
+padding:1.2em;
+    margin-top:2em;
+    width:22em;
+    background-color: rgb(150,201,62);
+    border: 1px solid rgb(150,201,62);
+    border-radius: 5px;
+    font-size: 1em;
+    color:white;
+    text-align: center;
+} 
+.Oferta_borrar {
+    padding:1em;
+    margin-top:2em;
+    margin-left: 20em;
+    width:22em;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: rgb(150,201,62);
+    border: 1px solid rgb(150,201,62);
+      color:white;
+}
+
+.contenedor_oferta2 {
+ height: 90vh;
+ position: relative;
+  top:100px;
+margin-left:20rem;
+
 }
 
 /*media queries */
+
 
 @media screen and (max-width: 767px) {
     /* Estilos para pantallas pequeñas */
@@ -448,16 +616,15 @@ footer a {
 
     header {
         height: 10.5vh;
+        width:100vw;
         max-width: 100vw;
         background-color: rgb(53,58,64);
         padding:3px;
         display: flex;
         justify-content: space-between;
-        position:fixed;
+        position:relative;
         z-index: 100;
-        }
-      
-    
+        }    
     header img {
         width:50%;
         height: 90%;
@@ -469,7 +636,8 @@ footer a {
         display: flex;
         font-size:1.8em;
         color: white;
-        max-width: 100%;
+        width: 100vw;
+        max-width: 100vw;
         white-space: nowrap; 
         
     }
@@ -478,6 +646,7 @@ footer a {
       align-self:center;
       font-size: 16px;
     }
+
       /* barra de navegacion responsiva*/
 
     .nav nav {
@@ -489,7 +658,6 @@ footer a {
     }
 
     .nav__responsive {
-    
         display:none;  
     }
     
@@ -916,6 +1084,199 @@ footer a {
         text-decoration: none;
         color: white;
     }
+ .contenedor_oferta {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        gap:1em;
+        width: 22em;
+        margin-left: ;
+
+    }
+
+    .Oferta_titulo {
+        padding: 1.3em 1em .2em 2em;
+         font-weight: 500;
+          color:rgb(32,38,44)
+
+     }
+    .Oferta_subtitulo {
+            padding: 1em 1em 1em 1.7em;
+            font-size: 1.1em;
+             color:rgb(32,38,44)
+    }
+    .Oferta_porcentaje {
+             padding: 1em 1em .2em 6em;
+             font-weight: bold;
+              color:rgb(32,38,44) 
+
+    }
+    .Oferta_documentacion {
+             padding: 1em 1em 1em 1.5em;
+             color:gray;
+    }
+    .estudiante {
+        border: 1.5px solid rgb(12,129,255);  
+          width: 70vw; 
+    }
+    .trainee {
+        border: 1.5px solid rgb(26,164,186);  
+             width: 70vw; 
+    }
+    .junior {
+        border: 2px solid rgb(254,193,7);
+             width: 70vw; 
+    }
+    .Oferta_venta {
+        margin:1em 0em .2em 29em;
+                 font-weight: 500;
+                 font-size: 1em;
+                  color:rgb(32,38,44)
+    }
+
+    .Oferta_ticket {
+        display:none;
+         margin:.5em 0em .2em 15em;
+       font-size: 1.6em;
+        color:rgb(32,38,44);
+        max-width:100vw;
+   }
+  .Oferta_ticket-mq {
+    display: block;
+    margin: 0 .2em .2em 11em;
+    font-size: 2em;
+    color: rgb(32, 38, 44);
+    white-space: nowrap;
+}
+.plata {
+    margin-left:3.7em;
+
+}
+
+   .Oferta_form {
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+   }
+
+
+   .Oferta_nombre {
+    padding:1em;
+    margin-left: 20.3em;
+    width:22em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+   }
+   .Oferta_apellido {
+    padding:1em;
+    width:22em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+    margin-left:20.3em;
+   }
+   .Oferta_correo {
+    padding:1em;
+    width:22em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+    margin-left: 20.3em;
+    margin-bottom:1em;
+   }
+   .Oferta_form2 {
+    white-space: pre-line;
+   }
+   .Oferta_form3 {
+    display: flex;
+    gap:.6em;
+   }
+   .Oferta_estudiante {
+    margin-top:1em;
+    padding:1em;
+    width:21em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+   }
+   .Oferta_cantidad {
+    padding:1em;
+    margin-top:1em;
+    margin-left: 20em;
+    width:22em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+   }
+
+    .Oferta_estudiante1 {
+    font-size: 1em;
+    margin-left:11em;
+    margin-top:1.5em !important ;
+
+   }
+   .Oferta_cantidad1 {
+    margin-left:21em;
+    margin-top:1.5em;
+    font-size: 1em;
+   }
+
+   .Oferta_cantEst {
+    display:flex;
+   }
+
+.Jspay {
+    font-size:1.2em;
+    margin-left:16.5em;
+    margin-top:1.7em;
+    padding:1em;
+    border:1px solid rgb(182,217,255);
+    width:38em;
+    height: 3,4em;
+    color:rgb(3,68,136);
+    background-color: rgb(204,229,255);
+    border-radius: 5px;
+    max-width: 100vw;
+}
+.Btn {
+    display: flex;
+    gap:1em;
+    margin-left: 5em;
+       }
+.Oferta_resumen {
+padding:1.2em;
+    margin-top:2em;
+    width:22em;
+    background-color: rgb(150,201,62);
+    border: 1px solid rgb(150,201,62);
+    border-radius: 5px;
+    font-size: 1em;
+    color:white;
+    text-align: center;
+    max-width: 9em;
+} 
+.Oferta_borrar {
+    padding:1em;
+    margin-top:2em;
+    margin-left: 20em;
+    width:22em;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: rgb(150,201,62);
+    border: 1px solid rgb(150,201,62);
+      color:white;
+}
+
+.contenedor_oferta2 {
+ height: auto;
+ width:100vw;
+ position: relative;
+  top:100px;
+  right:40em;
+
+}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -1430,9 +1791,208 @@ footer a {
         }
         .espacio {
             display: inline-block;
-            margin-top:4px
+            margin-top:4px;
         }
+        .contenedor_oferta {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        position: relative;
+        gap:1em;
+        width: 100vw;
+        margin-top:23vw ;
+
     }
+
+    .Oferta_titulo {
+        padding: 1.3em 1em .2em 2em;
+         font-weight: 500;
+          color:rgb(32,38,44)
+
+     }
+    .Oferta_subtitulo {
+            padding: 1em 1em 1em 1.7em;
+            font-size: 1.1em;
+             color:rgb(32,38,44)
+    }
+    .Oferta_porcentaje {
+             padding: 1em 1em .2em 6em;
+             font-weight: bold;
+              color:rgb(32,38,44) 
+
+    }
+    .Oferta_documentacion {
+             padding: 1em 1em 1em 1.5em;
+             color:gray;
+    }
+    .estudiante {
+        border: 1.5px solid rgb(12,129,255);  
+          width: 100vw; 
+    }
+    .trainee {
+        border: 1.5px solid rgb(26,164,186);  
+             width: 100vw; 
+    }
+    .junior {
+        border: 2px solid rgb(254,193,7);
+             width: 100vw;  
+    }
+    .Oferta_venta {
+        margin:1em 0em .2em 40em;
+                 font-weight: 500;
+                 font-size: 1em;
+                  color:rgb(32,38,44)
+    }
+
+    .Oferta_ticket {
+        display:block;
+         margin:.5em 0em .2em 12em;
+       font-size: 2.5em;
+        color:rgb(32,38,44);
+        max-width:100vw;
+        white-space: nowrap;
+   }
+  .Oferta_ticket-mq {
+    display: none;
+    margin: 0 .2em .2em 11em;
+    font-size: 2em;
+    color: rgb(32, 38, 44);
+    white-space: nowrap;
+}
+.plata {
+    margin-left:3.7em;
+
+}
+
+   .Oferta_form {
+    display: flex;
+    flex-direction: row;
+    gap:1em;
+   }
+
+
+   .Oferta_nombre {
+    padding:1em;
+    padding-right:8em;
+    margin-left: 21.3em;
+    width:32em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+   }
+   .Oferta_apellido {
+    padding:1em;
+    padding-right:8em;
+    width:22em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+ 
+   }
+   .Oferta_correo {
+    padding:1em;
+    width:43em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+    margin-left: 21.3em;
+    margin-bottom:1em;
+   }
+   .Oferta_form2 {
+    white-space: pre-line;
+   }
+   .Oferta_form3 {
+    display: flex;
+    gap:.6em;
+   }
+   .Oferta_estudiante {
+    margin-top:1em;
+    padding:1em;
+    width:27em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+    margin-left: 0em;
+   }
+   .Oferta_cantidad {
+    padding:1em;
+    margin-top:1em;
+    margin-left: 23em;
+    padding-right: 6em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+
+   }
+
+    .Oferta_estudiante1 {
+    font-size: 1em;
+    margin-left:15em;
+    margin-top:1.5em !important ;
+
+   }
+   .Oferta_cantidad1 {
+    margin-left:25em;
+    margin-top:1.5em;
+    font-size: 1em;
+   }
+
+   .Oferta_cantEst {
+    display:flex;
+   }
+
+.Jspay {
+    font-size:1.2em;
+    margin-left:16.5em;
+    margin-top:1.7em;
+    padding:1em;
+    border:1px solid rgb(182,217,255);
+    width:38em;
+    height: 3,4em;
+    color:rgb(3,68,136);
+    background-color: rgb(204,229,255);
+    border-radius: 5px;
+    max-width: 100vw;
+}
+.Btn {
+    display: flex;
+    gap:1em;
+    margin-left: 1em;
+       }
+.Oferta_resumen {
+padding:1.2em;
+    margin-top:2em;
+    width:40em;
+    background-color: rgb(150,201,62);
+    border: 1px solid rgb(150,201,62);
+    border-radius: 5px;
+    font-size: 1em;
+    color:white;
+    text-align: center;
+    padding-right:6em;
+} 
+.Oferta_borrar {
+    padding:1em;
+    margin-top:2em;
+    margin-left: 30em;
+    width:42em;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: rgb(150,201,62);
+    border: 1px solid rgb(150,201,62);
+    color:white;
+     padding-right:6em;
+}
+
+.contenedor_oferta2 {
+ height: auto;
+ width:100vw;
+ position: relative;
+  top:100px;
+  right:40em;
+
+}
+}
     /* Estilos para pantallas medianas */
 
 @media screen and (min-width: 1024px) and (max-width:1400px) {
@@ -1956,6 +2516,208 @@ footer a {
         display: inline-block;
         margin-top:4px
     }
+    .contenedor_oferta {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        position: relative;
+        gap:1em;
+        width: 100vw;
+        margin-top:11em;
+    }
+    .contenedor_oferta2 {
+        margin-left:40vw;
+    }
+
+    .Oferta_titulo {
+        padding: 1.3em 1em .2em 2em;
+         font-weight: 500;
+          color:rgb(32,38,44)
+
+     }
+    .Oferta_subtitulo {
+            padding: 1em 1em 1em 1.7em;
+            font-size: 1.1em;
+             color:rgb(32,38,44)
+    }
+    .Oferta_porcentaje {
+             padding: 1em 1em .2em 6em;
+             font-weight: bold;
+              color:rgb(32,38,44) 
+
+    }
+    .Oferta_documentacion {
+             padding: 1em 1em 1em 1.5em;
+             color:gray;
+    }
+    .estudiante {
+        border: 1.5px solid rgb(12,129,255);  
+          width: 100vw; 
+    }
+    .trainee {
+        border: 1.5px solid rgb(26,164,186);  
+             width: 100vw; 
+    }
+    .junior {
+        border: 2px solid rgb(254,193,7);
+             width: 100vw;  
+    }
+    .Oferta_venta {
+        margin:1em 0em .2em 40em;
+                 font-weight: 500;
+                 font-size: 1em;
+                  color:rgb(32,38,44)
+    }
+
+    .Oferta_ticket {
+        display:block;
+         margin:.5em 0em .2em 12em;
+       font-size: 2.5em;
+        color:rgb(32,38,44);
+        max-width:100vw;
+        white-space: nowrap;
+   }
+  .Oferta_ticket-mq {
+    display: none;
+    margin: 0 .2em .2em 11em;
+    font-size: 2em;
+    color: rgb(32, 38, 44);
+    white-space: nowrap;
+}
+.plata {
+    margin-left:3.7em;
+
+}
+
+   .Oferta_form {
+    display: flex;
+    flex-direction: row;
+    gap:1em;
+   }
+
+
+   .Oferta_nombre {
+    padding:1em;
+    padding-right:8em;
+    margin-left: 21.3em;
+    width:32em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+   }
+   .Oferta_apellido {
+    padding:1em;
+    padding-right:8em;
+    width:22em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+ 
+   }
+   .Oferta_correo {
+    padding:1em;
+    width:43em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+    margin-left: 21.3em;
+    margin-bottom:1em;
+   }
+   .Oferta_form2 {
+    white-space: pre-line;
+   }
+   .Oferta_form3 {
+    display: flex;
+    gap:.6em;
+   }
+   .Oferta_estudiante {
+    margin-top:1em;
+    padding:1em;
+    width:27em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+    margin-left: 0em;
+   }
+   .Oferta_cantidad {
+    padding:1em;
+    margin-top:1em;
+    margin-left: 23em;
+    padding-right: 6em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+
+   }
+
+    .Oferta_estudiante1 {
+    font-size: 1em;
+    margin-left:15em;
+    margin-top:1.5em !important ;
+
+   }
+   .Oferta_cantidad1 {
+    margin-left:25em;
+    margin-top:1.5em;
+    font-size: 1em;
+   }
+
+   .Oferta_cantEst {
+    display:flex;
+   }
+
+.Jspay {
+    font-size:1.2em;
+    margin-left:16.5em;
+    margin-top:1.7em;
+    padding:1em;
+    border:1px solid rgb(182,217,255);
+    width:38em;
+    height: 3,4em;
+    color:rgb(3,68,136);
+    background-color: rgb(204,229,255);
+    border-radius: 5px;
+    max-width: 100vw;
+}
+.Btn {
+    display: flex;
+    gap:1em;
+    margin-left: 1em;
+       }
+.Oferta_resumen {
+padding:1.2em;
+    margin-top:2em;
+    width:40em;
+    background-color: rgb(150,201,62);
+    border: 1px solid rgb(150,201,62);
+    border-radius: 5px;
+    font-size: 1em;
+    color:white;
+    text-align: center;
+    padding-right:6em;
+} 
+.Oferta_borrar {
+    padding:1em;
+    margin-top:2em;
+    margin-left: 30em;
+    width:42em;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: rgb(150,201,62);
+    border: 1px solid rgb(150,201,62);
+    color:white;
+     padding-right:6em;
+}
+
+.contenedor_oferta2 {
+ height: auto;
+ width:100vw;
+ position: relative;
+  top:100px;
+  right:40em;
+
+}
+
 }
 
 @media screen and (min-width:1440px) and (max-width:1500px) {
@@ -2376,11 +3138,12 @@ footer a {
         width: 102.9%;
         margin-top:20px;
         background: rgb(29,58,74);
-        height: 5em;
+        height: 10em;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 90px;
+        padding-bottom: 5em;
     }
     
     footer a {
@@ -2394,5 +3157,177 @@ footer a {
         display: inline-block;
         margin-top:4px
     }
+.espacio {
+    display: inline-block;
+    margin-top:4px
 
+}
+
+  .contenedor_oferta {
+        display: flex;
+        position: relative;
+        left:20em;
+        gap:.3em;
+        max-width: 50em;
+
+    }
+
+    .Oferta_titulo {
+        padding: 1.3em 1em .2em 2em;
+         font-weight: 500;
+          color:rgb(32,38,44)
+
+     }
+    .Oferta_subtitulo {
+            padding: 1em 1em 1em 1.7em;
+            font-size: 1.1em;
+             color:rgb(32,38,44)
+    }
+    .Oferta_porcentaje {
+             padding: 1em 1em .2em 6em;
+             font-weight: bold;
+              color:rgb(32,38,44) 
+
+    }
+    .Oferta_documentacion {
+             padding: 1em 1em 1em 1.5em;
+             color:gray;
+    }
+    .estudiante {
+        border: 1.5px solid rgb(12,129,255);  
+        height: 20em; 
+    }
+    .trainee {
+        border: 1.5px solid rgb(26,164,186);  
+    }
+    .junior {
+        border: 2px solid rgb(254,193,7)
+    }
+    .Oferta_venta {
+        margin:.5em 0em .2em 40em;
+                 font-weight: 500;
+                 font-size: 1em;
+                  color:rgb(32,38,44)
+    }
+
+    .Oferta_ticket {
+         margin:.5em 0em .2em 15em;
+       font-size: 2em;
+        color:rgb(32,38,44)
+   }
+    .Oferta_ticket-mq {
+display:none;
+   }
+   .Oferta_form {
+    display: flex;
+    gap:1em;
+   }
+
+   .Oferta_nombre {
+    padding:1em;
+    margin-left: 20em;
+    width:22em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+   }
+   .Oferta_apellido {
+    padding:1em;
+    width:22em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+   }
+   .Oferta_correo {
+    padding:1em;
+    width:45em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+    margin-left: 20em;
+    margin-bottom:1em;
+   }
+   .Oferta_form2 {
+    white-space: pre-line;
+   }
+   .Oferta_form3 {
+    display: flex;
+    gap:1em;
+   }
+   .Oferta_estudiante {
+    margin-top:1em;
+    padding:1em;
+    width:22em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+   }
+   .Oferta_cantidad {
+    padding:1em;
+    margin-top:1em;
+    margin-left: 20em;
+    width:22em;
+    border: 1px solid rgb(208,214,225);
+    border-radius: 5px;
+    font-size: 1em;
+   }
+
+    .Oferta_estudiante1 {
+    font-size: 1em;
+    margin-left:20em;
+    margin-top:1em !important ;
+
+   }
+   .Oferta_cantidad1 {
+    margin-left:20em;
+    margin-top:1.5em;
+    font-size: 1em;
+   }
+.Jspay {
+    font-size:1.2em;
+    margin-left:16.5em;
+    margin-top:1.7em;
+    padding:1em;
+    border:1px solid rgb(182,217,255);
+    width:38em;
+    height: 3,4em;
+    color:rgb(3,68,136);
+    background-color: rgb(204,229,255);
+    border-radius: 5px;
+}
+.Btn {
+    display: flex;
+    gap:1em;
+       }
+.Oferta_resumen {
+padding:1.2em;
+    margin-top:2em;
+    width:22em;
+    background-color: rgb(150,201,62);
+    border: 1px solid rgb(150,201,62);
+    border-radius: 5px;
+    font-size: 1em;
+    color:white;
+    text-align: center;
+} 
+.Oferta_borrar {
+    padding:1em;
+    margin-top:2em;
+    margin-left: 20em;
+    width:22em;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: rgb(150,201,62);
+    border: 1px solid rgb(150,201,62);
+      color:white;
+}
+
+.contenedor_oferta2 {
+ height: 92vh;
+ position: relative;
+top:100px;
+margin-left:10rem;
+margin-top:80px;
+
+}
 }

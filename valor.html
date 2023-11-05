@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Conferencia Buenos Aires</title>
+    <link rel="icon" href="img/codoacodo.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    
+</head>
+<body>
+    <!-- Header contenido con una IMAGEN que tiene que ir al lado izquierdo del h2-->
+    <!-- Nav esta indexado en el header. Por lo que va a estar del lado derecho.-->
+    <header>
+        <div class="logo">
+             <img src="img/codoacodo.png">
+             <div class="logo__titulo">
+             <h2>Conf Bs As </h2>
+            </div>        
+        </div>
+       
+        <div class="nav">
+            <nav>
+                <a href="index.html#conf"> La conferencia </a>
+                <a href="index.html#los_oradores"> Los oradores </a>
+                <a href="prueba.html"> El lugar y la fecha </a>
+            <!-- agregue clase noresponsive para eliminar el medianav1 de altas resoluciones-->
+            <!--agregue medianav2-->
+                <a href="index.html#form_orador"> <span class="medianav1"> Conviertete en Orador </span></a>
+                <a class="link" href="valor.html"> <span class="medianav1 noresponsive">Comprar Tickets </a> </span>
+                <a class="link" href="valor.html"> <span class="medianav2">Comprar Tickets </a> </span>
+            </nav>
+        </div>
+
+        <div class="nav__responsive">
+            
+                <a href="#"> La conferencia </a>
+                <a href="#"> Los oradores </a>
+                <a href="#"> El lugar y la fecha </a>
+                <a href="#"> <span class="medianav1">Conviertete en Orador </span></a>
+                <a class="link" href="valor.html"> <span class="medianav1">Comprar Tickets </a> </span>
+                <a class="link" href="valor.html"> <span class="medianav2">Comprar Tickets </a> </span>
+            </nav>
+        </div>
+   
+    </header>
+    <!-- Hay 5 sections que se encuentran en el MAIN.-->
+    <main>
+        <article>
+            <!--En esta seccion habra una imagen. El texto lorem debe estar a la derecha. Tiene un h1 y p--> 
+     <br>
+     <div class="contenedor_oferta2">
+     <div class="contenedor_oferta">
+    <div class="estudiante"> 
+        <h2 class="Oferta_titulo">Estudiante</h2>
+        <p class="Oferta_subtitulo">Tienen un descuento</p>
+        <p class="Oferta_porcentaje">80%</p>
+        <p class="Oferta_documentacion">* presentar documentación</p>
+    </div>
+
+    <div class="trainee"> 
+        <h2 class="Oferta_titulo">Trainee</h2>
+        <p class="Oferta_subtitulo">Tienen un descuento</p>
+        <p class="Oferta_porcentaje">50%</p>
+        <p class="Oferta_documentacion">* presentar documentación</p>
+    </div>
+
+    <div class="junior"> 
+        <h2 class="Oferta_titulo">Junior</h2>
+        <p class="Oferta_subtitulo">Tienen un descuento</p>
+        <p class="Oferta_porcentaje">15%</p>
+        <p class="Oferta_documentacion">* presentar documentación</p>
+    </div>
+</div>
+
+    <h3 class="Oferta_venta"> VENTA </h3>
+    <h2 class="Oferta_ticket"> VALOR DE TICKET $200 </h2>
+    <h2 class="Oferta_ticket-mq"> VALOR DE TICKET <br> <span class="plata"> $200</span> </h2>
+<div class=Oferta_form>
+    <input type="text" placeholder="Nombre" class="Oferta_nombre">
+    <input type="text" placeholder="Apellido" class="Oferta_apellido">
+</div>
+
+<div class="Oferta_form2">
+    <input type="text" placeholder="Correo" class="Oferta_correo">
+</div>
+<div class="Oferta_cantEst">
+    <label for ="Cantidad" class="Oferta_cantidad1"> Cantidad </label> 
+    <label for ="estudiante" class=" Oferta_estudiante1"> Categoria </label>
+</div>
+     <div class="Oferta_form3"> 
+    <input type="text" placeholder="cantidad" name="Cantidad" class="Oferta_cantidad">
+   <select name="estudiante" class="Oferta_estudiante">
+    <option value="elegir">Elegir</option>
+    <option value="estudiante">Estudiante</option>
+    <option value="trainee">Trainee</option>
+    <option value="junior">Junior</option>
+</select>
+
+
+</div>
+
+<div class="Jspay">
+    <p> Total a pagar: $<span id="total">0 </span></p>
+</div>
+
+<div class="Btn">
+    <input type="reset" value="borrar" class="Oferta_borrar">
+    <p class="Oferta_resumen"> Resumen </p>
+</div>
+</div>
+  <script>
+            const cantidadInput = document.querySelector('.Oferta_cantidad');
+            const descuentoSelect = document.querySelector('.Oferta_estudiante');
+            const totalDisplay = document.querySelector('#total');
+            const resumenButton = document.querySelector('.Oferta_resumen');
+            const borrarButton = document.querySelector('.Oferta_borrar');
+            const nombreInput = document.querySelector('.Oferta_nombre');
+            const apellidoInput = document.querySelector('.Oferta_apellido');
+            const correoInput = document.querySelector('.Oferta_correo');
+
+            // Función para validar la cantidad
+            function esCantidadValida(cantidad) {
+                return /^[0-9]+$/.test(cantidad);
+            }
+
+            // Función para calcular y mostrar el total
+            function calcularTotal() {
+                const cantidad = cantidadInput.value.trim();
+                if (!esCantidadValida(cantidad) || cantidad < 0) {
+                    alert('Número inválido. Por favor, ingrese un número válido.');
+                    return;
+                }
+
+                const cantidadNumerica = parseInt(cantidad);
+                const ticketPrecio = 200; // Precio del ticket
+                const descuento = obtenerDescuento(descuentoSelect.value);
+                const precioConDescuento = ticketPrecio * cantidadNumerica * (1 - descuento);
+                totalDisplay.textContent = precioConDescuento.toFixed(2);
+            }
+
+            // Función para obtener el descuento
+            function obtenerDescuento(categoriaSeleccionada) {
+                const descuentos = {
+                    elegir: 0,
+                    estudiante: 0.8,
+                    trainee: 0.5,
+                    junior: 0.15,
+                };
+                return descuentos[categoriaSeleccionada];
+            }
+
+            // Evento al hacer clic en el botón "Resumen"
+            resumenButton.addEventListener('click', calcularTotal);
+
+            // Evento al hacer clic en el botón "Borrar"
+            borrarButton.addEventListener('click', function () {
+                cantidadInput.value = '';
+                descuentoSelect.value = 'elegir';
+                totalDisplay.textContent = '0';
+                nombreInput.value = '';
+                apellidoInput.value = '';
+                correoInput.value = '';
+            });
+        </script>
+
+    <footer>
+        <a href="prueba.html"> Preguntas <br> <span class="espacio"> frecuentes </span> </a>
+        <a href="prueba.html"> Contactanos </a>
+        <a href="prueba.html"> Prensa </a>
+        <a href="prueba.html"> Conferencias </a>
+        <a href="prueba.html"> Terminos y <br> <span class="espacio"> condiciones </span> </a>
+        <a href="prueba.html"> Privacidad </a>
+        <a href="prueba.html"> Estudiantes </a>
+    </footer>
+
+</body>
+</html>
